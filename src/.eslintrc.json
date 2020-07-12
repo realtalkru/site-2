@@ -1,0 +1,21 @@
+// module.exports = { extends: 'airbnb-base', rules: { 'linebreak-style': ['error', 'windows'] } };
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "linebreak-style": ["error", "windows"],
+    "semi": 2,
+    "no-unused-vars": 1,
+    "quotes": [2, "double", "avoid-escape"]
+  }
+}
