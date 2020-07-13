@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
+        <title>Счетчик калорий</title>
+    </head>
+    <body>
+        <form class="form">
+            <h2 class="form-title">Рекомендуемая суточная норма калорий</h2>
+            <div class="radio-group sex">
+                <label for="male">Мужчина</label>
+                <label for="female">Женщина</label>
+                <input сlass="sex-btn" type="radio" name="sex-btn" id="male"
+                    value="male" checked>
+                <input class="sex-btn" type="radio" name="sex-btn" id="female"
+                    value="female">
+            </div>
+            <input class="input age" type="number" placeholder="Ваш возраст"
+                required>
+            <input class="input height" type="number" placeholder="Ваш рост"
+                required>
+            <input class="input weight" type="number" placeholder="Ваш вес"
+                required>
+
+
+
+            <div include="form-input-select()">
+                <label for="activity">Физические нагрузки</label>
+                <select required class="select" id="activity">
+                    <option value="" hidden>Выберите уровень вашей активности</option>
+                    <option value="1.2">Ничем не занимаюсь</option>
+                    <option value="1.375">1-3 тренировки в неделю</option>
+                    <option value="1.55">3-5 тренировок в неделю</option>
+                    <option value="1.725">Каждый день</option>
+                    <option value="1.9">Каждый день - утром и вечером</option>
+                </select>
+            </div>
+
+            <div include="form-input-select()">
+                <label for="goal">Ожидаемый результат</label>
+                <select required class="select" id="goal">
+                    <option value="" hidden> Выберите вашу еженедельную цель</option>
+                    <option value="1">Терять 900 грамм в неделю</option>
+                    <option value="2">Терять 700 грамм в неделю</option>
+                    <option value="3">Терять 450 грамм в неделю</option>
+                    <option value="4">Терять 200 грамм в неделю</option>
+                    <option value="5">Сохранить текущий вес</option>
+                </select>
+            </div>
+
+            <button class="btn submit" type="submit">Посчитать</button>
+            <button class="btn reset" type="reset">Сбросить</button>
+            <div class="result">Результат <span class="output"></span></div>
+        </form>
+
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
